@@ -176,10 +176,32 @@ Overall, operating in a cloud would allow companies to save cost as there is no 
   - VM Name: azure-webserver
   - Region: Southeast Asia (Zone 1)
   - OS: Linux
+* Connections made via Windows Powershell `ssh -i C:\Users\User\Downloads\azureuser.pem <Public Key available on Cloud Service>`
+* Basic security hardening 
 
 
+<br/>
+<img width="975" height="920" alt="image" src="https://github.com/user-attachments/assets/4acfa9a0-5b58-4139-8fc2-1477e1a498f1" />
+<br/>
+<br/>
+<br/>
+<img width="975" height="999" alt="image" src="https://github.com/user-attachments/assets/709fbd11-47dd-4179-9a0c-5a91bb0b8ccd" />
+<br/> 
+<br/>
+<br/>
+<img width="975" height="198" alt="image" src="https://github.com/user-attachments/assets/90f91267-2612-46b2-859e-7efc0de9b3d2" />
 
+### Bash Scripting
+* Create a directory then create a script
+  - `mkdir bash` creates a directory
+  - `cd bash` goes to the directory created
+  - `touch myScript.sh` creates a script
+  - `chmod 777 myScript.sh` allows everyone to read, write, and execute the file. (`chmod 755` used for script (owner full access, others read/execute only), `chmod 644` used for config files (owner read/write, others read only))
 
+<br/>
+<img width="867" height="155" alt="image" src="https://github.com/user-attachments/assets/1ed231ed-acda-457e-8ef1-3d92f38c9b68" />
+<br/>
+<br/>
 
 
 
