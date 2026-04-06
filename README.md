@@ -371,6 +371,55 @@ ls /home/azureuser/*.zip
 <br/>
 <br/>
 <img width="975" height="822" alt="image" src="https://github.com/user-attachments/assets/cff4721a-0764-41e7-8904-9091e5ce4c07" />
+<br/>
+<br/>
+
+### DNS & Certificates
+* Register for a free domain at duckDNS (https://www.duckdns.org/)
+* Create port 80 (HTTP) and 443 (HTTPS) on your Cloud service
+* Connect SSH into your Cloud VM
+* Install apache2 `sudo apt update` and `sudo apt install apaache2 -y`
+* start apache `sudo systemctl start apache2`
+* Change the IP that is defaulted for you at duckDNS (IPv4) to your Public IP
+* Verify DNS by using `ping (yourDNSServerName.duckdns.org)`
+* Open a web browser and confirm that apache page is running `yourDNSServerName.duckdns.org`
+
+
+<img width="1035" height="421" alt="image" src="https://github.com/user-attachments/assets/d3b0f6fd-039a-483a-b7e7-00bd53871648" />
+<br/>
+<br/>
+
+Changed to: 
+
+<br/>
+<img width="975" height="448" alt="image" src="https://github.com/user-attachments/assets/7951ba42-bed2-402d-b54c-5eda62e0cfd6" />
+<br/>
+<br/>
+<br/>
+<img width="975" height="1208" alt="image" src="https://github.com/user-attachments/assets/72b9da79-395d-4dd6-9cab-360fbdf2bc04" />
+<br/>
+<br/>
+
+### HTTPS (Secure)
+* Installed certbot `sudo apt install certbot python3-certbot-apache`  
+* `sudo certbot --apache`  
+* HTTPS enabled `https://bdgisea.duckdns.org`  
+
+<br/>
+<br/>
+<img width="975" height="1208" alt="image" src="https://github.com/user-attachments/assets/46959d29-ca5a-49d0-9ca7-70479f22f0ef" />
+<br/>
+<br/>
+
+# 4. Session 4
+
+## Lab 4 (MariaDB)
+
+
+
+
+
+
 
 
 
