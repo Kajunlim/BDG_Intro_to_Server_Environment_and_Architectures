@@ -220,7 +220,7 @@ Overall, operating in a cloud would allow companies to save cost as there is no 
 # 3. Session 3  
 
 ## Lab 3
-Cron job (Basic)
+### Cron job (Basic)
 <br/>
 <br/>
 <img width="975" height="700" alt="image" src="https://github.com/user-attachments/assets/2147b5fb-4dea-4df9-a3b6-585eaf8b9aef" />
@@ -234,6 +234,226 @@ Cron job (Basic)
 <img width="731" height="827" alt="image" src="https://github.com/user-attachments/assets/6a85b564-81fa-42fe-8b31-27b364b94abc" />
 <br/> 
 <br/> 
+
+### Cron job (Lab) 
+
+Cron job is a scheduled task in Linux systems that runs automatically at specified times or intervals, making it essential for autoamting repetive tasks like backups, updates, and monitoring. 
+
+### Original (Lab)
+1) Create the directories and test files
+2) Create the backup script
+3) Code inside the script
+4) Upload the PEM key to the VM
+5) Fix the key permission on the VM
+6) Grant permissions and move the script to /usr/bin
+7) Test script manually
+8) Check it worked
+9) Schedule the cron job (hourly)
+10) Test SSH key access to confirm SCP will work
+
+<br/>
+```
+mkdir -p /home/azureuser/Documents /home/azureuser/backup
+echo "test file 1" > /home/azureuser/Documents/file1.txt
+echo "test file 2" > /home/azureuser/Documents/file2.txt
+mkdir -p /home/azureuser/Documents/subdir
+echo "nested file" > /home/azureuser/Documents/subdir/file3.txt
+
+(script)
+
+#!/bin/bash
+now=$(date +"%d_%m_%y")
+
+cp -R /home/azureuser/Documents/* /home/azureuser/backup/
+
+zip -r /home/azureuser/$now.zip /home/azureuser/backup/*
+
+cp /home/azureuser/$now.zip /home/azureuser/
+
+scp -i /home/azureuser/azureuser.pem \
+    -o StrictHostKeyChecking=no \
+    /home/azureuser/$now.zip \
+    azureuser@172.188.17.77:/home/azureuser/
+
+(script)
+
+scp -i "C:\Users\User\Downloads\azureuser.pem" "C:\Users\User\Downloads\azureuser.pem" azureuser@172.188.17.77:/home/azureuser/azureuser.pem
+chmod 400 /home/azureuser/azureuser.pem
+chmod 777 /home/azureuser/testscript.sh
+sudo mv /home/azureuser/testscript.sh /usr/bin/testscript
+testscript
+ls /home/azureuser/*.zip
+ls /home/azureuser/backup/
+sudo nano /etc/crontab
+0 * * * * azureuser /usr/bin/testscript
+ssh -i /home/azureuser/azureuser.pem azureuser@172.188.17.77
+```
+
+
+Fixes made: 
+scp connections closed
+1) Run this in Window PowerShell (Not CMD) 
+2) Fix PEM key permissions on Windows. (Windows sometimes blocks the key if it has too many users with access
+3) ssh -i "C:\Users\User\Downloads\azureuser.pem" azureuser@172.188.17.77 (If works (SSH is fine), if fails (Go to cloud > see port 22 must be allowed > if missing, add inbound port rule - port 22 to allow)  
+```
+scp -i "C:\Users\User\Downloads\azureuser.pem" "C:\Users\User\Downloads\azureuser.pem" azureuser@172.188.17.77:/home/azureuser/azureuser.pem
+icacls "C:\Users\User\Downloads\azureuser.pem" /inheritance:r /grant:r "$($env:USERNAME):(R)"
+ssh -i "C:\Users\User\Downloads\azureuser.pem" azureuser@172.188.17.77
+```
+<br/>
+
+Permission issue on the .pem key file
+Common Azure VM issues. Azure VMs typically only allow SSH/SCP using the key from outside, but your trying to SCP from local machine to VM Azure VMs by default disable password authentication and only accept your .pem key for login. 
+SCP command needs the key specified correctly on Windows.
+
+1) Run this on Windows PowerShell (Not CMD)
+2) Fix PEM key permissions on Windows
+3) Verify you can SSH in first
+
+```
+chmod 400 /home/azureuser/azureuser.pem
+ls -l /home/azureuser/azureuser.pem
+
+(should show)
+-r-------- 1 azureuser azureuser ... azureuser.pem
+(should show)
+
+ssh -i /home/azureuser/azureuser.pem azureuser@172.188.17.77
+```
+
+Unzip the file and change permission (File is zip)
+1) Change permission to readable by owner and not writable or executable by anyone.
+2) Verify the permission
+3) Test again
+4) Open/extract the zip
+5) Extract into specific folder
+6) Check contents
+7) Peek without extracting
+8) Run the script manually
+9) Verify it ran successfully
+
+<br/>
+```
+chmod 400 /home/azureuser/azureuser.pem
+ls -l /home/azureuser/azureuser.pem
+
+(show)
+-r-------- 1 azureuser azureuser ... azureuser.pem
+(show)
+
+ssh -i /home/azureuser/azureuser.pem azureuser@172.188.17.77
+
+Unzip: To run
+
+unzip /home/azureuser/06_04_26.zip
+unzip /home/azureuser/06_04_26.zip -d /home/azureuser/extracted/
+ls /home/azureuser/extracted/
+unzip -l /home/azureuser/06_04_26.zip (Peek without extracting)
+testscript
+ls /home/azureuser/*.zip
+```
+
+<br/>
+<img width="975" height="759" alt="image" src="https://github.com/user-attachments/assets/a23a34eb-4bed-4e28-8989-bc6ea23a4209" />
+<br/>
+<br/>
+<br/>
+<img width="975" height="819" alt="image" src="https://github.com/user-attachments/assets/3b578629-bbfc-44bf-a986-be13c7d5b453" />
+<br/>
+<br/>
+<br/>
+<img width="975" height="828" alt="image" src="https://github.com/user-attachments/assets/1785eeb7-c48b-4d74-9a05-ae2b4a9eae52" />
+<br/>
+<br/>
+<br/>
+<img width="975" height="822" alt="image" src="https://github.com/user-attachments/assets/cff4721a-0764-41e7-8904-9091e5ce4c07" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
