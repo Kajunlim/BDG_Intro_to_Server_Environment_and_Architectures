@@ -172,6 +172,10 @@ Overall, operating in a cloud would allow companies to save cost as there is no 
 
 ### Cloud Computing 
 
+* Deployment of VM using Azure server
+  - VM Name: azure-webserver
+  - Region: Southeast Asia (Zone 1)
+  - OS: Linux
 
 
 
