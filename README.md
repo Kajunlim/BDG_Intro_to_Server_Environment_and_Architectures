@@ -221,7 +221,7 @@ Overall, operating in a cloud would allow companies to save cost as there is no 
 
 ## Lab 3
 Cron job
-* 
+
 
 
 
