@@ -191,21 +191,37 @@ Overall, operating in a cloud would allow companies to save cost as there is no 
 <br/>
 <img width="975" height="198" alt="image" src="https://github.com/user-attachments/assets/90f91267-2612-46b2-859e-7efc0de9b3d2" />
 
-### Bash Scripting
+### Bash Scripting and Cron
 * Create a directory then create a script
   - `mkdir bash` creates a directory
   - `cd bash` goes to the directory created
   - `touch myScript.sh` creates a script
-  - `chmod 777 myScript.sh` allows everyone to read, write, and execute the file. (`chmod 755` used for script (owner full access, others read/execute only), `chmod 644` used for config files (owner read/write, others read only))
+  - `chmod +x myScript.sh`
+    + `chmod 777` allows everyone to read, write, and execute the file, `chmod 755` used for script (owner full access, others read/execute only), `chmod 644` used for config files (owner read/write, others read only))
 
 <br/>
 <img width="867" height="155" alt="image" src="https://github.com/user-attachments/assets/1ed231ed-acda-457e-8ef1-3d92f38c9b68" />
 <br/>
 <br/>
 
+* Using loops, if/elif/else, and Cron to evaluate input
+  - For Loop
+  - if/elif/else
+  - use bash to run script
+<img width="559" height="227" alt="image" src="https://github.com/user-attachments/assets/0e276d2b-95bf-4383-bc31-ef25998bb005" />
+<br/>
+<br/>
+<img width="985" height="442" alt="image" src="https://github.com/user-attachments/assets/a58a2e2f-986a-42bc-b65e-3daf05eb568a" />
+<br/>
+<br/>
+<img width="534" height="125" alt="image" src="https://github.com/user-attachments/assets/81d76987-e4a1-4b01-86fe-f0b564e7ce10" />
+<br/>
 
+# 3. Session 3  
 
-
+## Lab 3
+Cron job
+* 
 
 
 
