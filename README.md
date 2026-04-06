@@ -220,7 +220,19 @@ Overall, operating in a cloud would allow companies to save cost as there is no 
 # 3. Session 3  
 
 ## Lab 3
-Cron job
+Cron job (Basic)
+<br/>
+<br/>
+<img width="975" height="700" alt="image" src="https://github.com/user-attachments/assets/2147b5fb-4dea-4df9-a3b6-585eaf8b9aef" />
+<br/>
+<br/>
+<br/>
+<img width="975" height="695" alt="image" src="https://github.com/user-attachments/assets/4a4ff090-f5db-4d21-aee1-faed4516e2f1" />
+<br/>
+<br/>
+<br/>
+<img width="731" height="827" alt="image" src="https://github.com/user-attachments/assets/6a85b564-81fa-42fe-8b31-27b364b94abc" />
+
 
 
 
