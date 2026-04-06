@@ -140,19 +140,37 @@ Student ID: CT0391262
 
 # 2. Session 2
 
+## Lab 2
+
 ### Total Cost Of Ownership (TCO)
 
+Assumtions that are made: 
+* High performance server on Azure server (~$1500/month) 
+* Hardware acquitsition for initial setup ($150,000), operating cost meeting in the middle (~$525) 
+* Operate for 5 years (60 Month)
+* Have not include maintenance, support, power and cooling
+<br/>
 
+|          | Cloud | On-Premises |
+| -------- | -------- | -------- |
+|Cost for setup| 0 | $150,000 |
+|Monthly| $1500 | $2500/Month + $525/Month |
+|Yearly | $18,000 | $36,300 |
+|3 Years| $648,000 | $$1,306,800 |
+|5 Years| $$90,000 | $2,178,000 |
 
+<br/>
+<br/>
+<img width="536" height="126" alt="image" src="https://github.com/user-attachments/assets/290b6f5f-5b48-4512-ab73-0f4d68983dd6" />
+<img width="529" height="322" alt="image" src="https://github.com/user-attachments/assets/b80e9631-c730-40fb-b487-33ae75a670f2" />
+<br/>
+<br/> 
 
+Overall, operating in a cloud would allow companies to save cost as there is no maintenance, support, power and cooling fees in addition to the acquisition cost and operational cost. Furthermore, cloud allows one company to expand or reduce the amount that of storage that they need according to their business model. 
+<br/>
+<br/>
 
-
-
-
-
-
-
-
+### Cloud Computing 
 
 
 
