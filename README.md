@@ -252,6 +252,7 @@ Cron job is a scheduled task in Linux systems that runs automatically at specifi
 10) Test SSH key access to confirm SCP will work
 
 <br/>
+
 ```
 mkdir -p /home/azureuser/Documents /home/azureuser/backup
 echo "test file 1" > /home/azureuser/Documents/file1.txt
@@ -294,12 +295,14 @@ Fixes made:
 scp connections closed
 1) Run this in Window PowerShell (Not CMD) 
 2) Fix PEM key permissions on Windows. (Windows sometimes blocks the key if it has too many users with access
-3) ssh -i "C:\Users\User\Downloads\azureuser.pem" azureuser@172.188.17.77 (If works (SSH is fine), if fails (Go to cloud > see port 22 must be allowed > if missing, add inbound port rule - port 22 to allow)  
+3) ssh -i "C:\Users\User\Downloads\azureuser.pem" azureuser@172.188.17.77 (If works (SSH is fine), if fails (Go to cloud > see port 22 must be allowed > if missing, add inbound port rule - port 22 to allow)
+
 ```
 scp -i "C:\Users\User\Downloads\azureuser.pem" "C:\Users\User\Downloads\azureuser.pem" azureuser@172.188.17.77:/home/azureuser/azureuser.pem
 icacls "C:\Users\User\Downloads\azureuser.pem" /inheritance:r /grant:r "$($env:USERNAME):(R)"
 ssh -i "C:\Users\User\Downloads\azureuser.pem" azureuser@172.188.17.77
 ```
+
 <br/>
 
 Permission issue on the .pem key file
@@ -314,9 +317,9 @@ SCP command needs the key specified correctly on Windows.
 chmod 400 /home/azureuser/azureuser.pem
 ls -l /home/azureuser/azureuser.pem
 
-(should show)
+(should show on PowerShell)
 -r-------- 1 azureuser azureuser ... azureuser.pem
-(should show)
+(should show on PowerShell)
 
 ssh -i /home/azureuser/azureuser.pem azureuser@172.188.17.77
 ```
@@ -333,13 +336,14 @@ Unzip the file and change permission (File is zip)
 9) Verify it ran successfully
 
 <br/>
+
 ```
 chmod 400 /home/azureuser/azureuser.pem
 ls -l /home/azureuser/azureuser.pem
 
-(show)
+(should show on PowerShell)
 -r-------- 1 azureuser azureuser ... azureuser.pem
-(show)
+(should show on PowerShell)
 
 ssh -i /home/azureuser/azureuser.pem azureuser@172.188.17.77
 
