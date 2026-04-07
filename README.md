@@ -414,103 +414,43 @@ Changed to:
 # 4. Session 4
 
 ## Lab 4 (MariaDB)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+* Install MariaDB `sudo apt install mariadb-server maria-client -y`
+* Start and enable MariaDB service `sudo systemctl start mariadb` then `sudo systemctl enable mariadb`
+* Secure MariaDB `sudo mysql_secure_installation`
+* Login to MariaDB `sudo mysql -u root -p`
+* Query data: 
+
+Sample Used:
+```
+-- 1. Create a new database
+CREATE DATABASE Lab;
+
+-- 2. Switch to the new database
+USE Lab;
+
+-- 3. Create a table named 'users'
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50),
+    email VARCHAR(100)
+);
+
+-- 4. Insert sample rows
+INSERT INTO users (name, email) VALUES
+('Alice', 'alice@example.com'),
+('Bob', 'bob@example.com');
+
+-- 5. Query the table
+SELECT * FROM users;
+```
+<img width="975" height="546" alt="image" src="https://github.com/user-attachments/assets/a4717c7f-d624-4068-8923-f4980092e335" />
+<br/>
+<br/>
+<br/>
+<img width="975" height="993" alt="image" src="https://github.com/user-attachments/assets/1a3f72c0-3212-4705-9718-ec34c623f3f5" />
+<br/>
+<br/>
+<br/>
+<img width="668" height="582" alt="image" src="https://github.com/user-attachments/assets/a04b74ef-f61c-46bc-94b9-89835ba7c4a3" />
+<br/>
+<br/>
