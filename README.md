@@ -153,16 +153,17 @@ Assumtions that are made:
 
 |          | Cloud | On-Premises |
 | -------- | -------- | -------- |
-|Cost for setup| 0 | $150,000 |
-|Monthly| $1500 | $2500/Month + $525/Month |
-|Yearly | $18,000 | $36,300 |
-|3 Years| $648,000 | $$1,306,800 |
-|5 Years| $$90,000 | $2,178,000 |
+|Cost for setup| 0 | $205,000 |
+|Monthly| $800 | ~$3,417 |
+|Yearly | $9,600 | $41,000 |
+|3 Years| $28,800 | $$123,000 |
+|5 Years| $48,000 | $205,000 |
 
 <br/>
+<img width="938" height="856" alt="image" src="https://github.com/user-attachments/assets/ffa88433-5141-4deb-9dc1-66f8e29c4bf3" />
 <br/>
-<img width="536" height="126" alt="image" src="https://github.com/user-attachments/assets/290b6f5f-5b48-4512-ab73-0f4d68983dd6" />
-<img width="529" height="322" alt="image" src="https://github.com/user-attachments/assets/b80e9631-c730-40fb-b487-33ae75a670f2" />
+<img width="485" height="95" alt="image" src="https://github.com/user-attachments/assets/7dcc288c-2014-425b-9efe-a74d188a3ea9" />
+<img width="546" height="138" alt="image" src="https://github.com/user-attachments/assets/f88823ed-28b5-4534-9f58-290004a4776e" />
 <br/>
 <br/> 
 
