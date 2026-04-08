@@ -145,10 +145,12 @@ Student ID: CT0391262
 ### Total Cost Of Ownership (TCO)
 
 Assumtions that are made: 
-* High performance server on Azure server (~$1500/month) 
-* Hardware acquitsition for initial setup ($150,000), operating cost meeting in the middle (~$525) 
-* Operate for 5 years (60 Month)
+* Comparison for setup cost, monthly cost, yearly cost, 3-year cost, and 5-year cost.
+* On premises (google_link_for_onPremiseCloud) total cost: $150,000 + $50,000 (Software Licenses & Virtualization) + $5,000 (Implementation) = $205,000
+* Cloud service costs will be based on the lab worksheet given
 * Have not include maintenance, support, power and cooling
+* The on-premises cloud infrastructure can only last 5 years, and after that, it would require a new setup.
+
 <br/>
 
 |          | Cloud | On-Premises |
