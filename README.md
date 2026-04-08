@@ -407,6 +407,10 @@ Changed to:
 
 <br/>
 <br/>
+<img width="544" height="666" alt="image" src="https://github.com/user-attachments/assets/02532103-461f-4785-8794-25826c7268c0" />
+<br/>
+<br/>
+<br/>
 <img width="975" height="1208" alt="image" src="https://github.com/user-attachments/assets/46959d29-ca5a-49d0-9ca7-70479f22f0ef" />
 <br/>
 <br/>
